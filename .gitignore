@@ -1,0 +1,10 @@
+# Config & Database credentials
+api/config.php
+api/db.php
+*.env
+
+# Server / IDE logs
+*.log
+.DS_Store
+.vscode/
+.idea/
