@@ -1,6 +1,7 @@
 # Config & Database credentials
 api/config.php
 api/db.php
+LAMPAPI/config.php
 *.env
 
 # Server / IDE logs
