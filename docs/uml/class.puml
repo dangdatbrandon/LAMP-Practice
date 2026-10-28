@@ -1,0 +1,56 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+
+class User {
+  - id: int
+  - login: string
+  - password: string
+  - firstName: string
+  - lastName: string
+  + register(): void
+  + login(): void
+}
+
+class Color {
+  - id: int
+  - userId: int
+  - name: string
+  - hexValue: string
+  + save(): void
+}
+
+class AuthenticationController {
+  + getRequestInfo(): array
+  + loginUser(): void
+  + returnWithInfo(): void
+  + returnWithError(): void
+}
+
+class ColorService {
+  + searchColors(userId: int, searchTerm: string): array
+  + addColor(userId: int, colorName: string): void
+}
+
+class DatabaseConnection {
+  - host: string
+  - username: string
+  - password: string
+  - dbName: string
+  + connect(): mysqli
+}
+
+class WebClient {
+  + sendLoginRequest(): void
+  + sendSearchRequest(): void
+  + sendAddColorRequest(): void
+}
+
+User "1" --> "0..*" Color : owns
+AuthenticationController --> User
+AuthenticationController --> DatabaseConnection
+ColorService --> Color
+ColorService --> DatabaseConnection
+WebClient --> AuthenticationController
+WebClient --> ColorService
+@enduml
