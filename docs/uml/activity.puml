@@ -1,0 +1,33 @@
+@startuml
+start
+:User opens the app;
+if (User has an account?) then (yes)
+  :Enter login credentials;
+  if (Credentials valid?) then (yes)
+    :Load dashboard;
+    repeat
+      if (User wants to search?) then (yes)
+        :Enter a color name;
+        :Query the Colors table;
+        :Display matching results;
+      else (no)
+        if (User wants to add a color?) then (yes)
+          :Enter color name and value;
+          :Validate input;
+          :Insert record into Colors;
+          :Show confirmation message;
+        else (no)
+          :Display dashboard;
+        endif
+      endif
+    repeat while (Continue using the app?) is (yes)
+    :End session;
+  else (no)
+    :Show login error;
+  endif
+else (no)
+  :Register a new account;
+  :Store user credentials;
+endif
+stop
+@enduml
