@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+skinparam shadowing false
+skinparam packageStyle rectangle
+
+actor User
+database "MySQL Database" as DB
+
+rectangle "Colors Web App" {
+  usecase "Register Account" as UC1
+  usecase "Log In" as UC2
+  usecase "Search Colors" as UC3
+  usecase "Add Color" as UC4
+  usecase "View Saved Colors" as UC5
+}
+
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+User --> UC5
+UC3 --> DB
+UC4 --> DB
+UC5 --> DB
+@enduml
