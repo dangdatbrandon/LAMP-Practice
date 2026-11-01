@@ -1,7 +1,7 @@
 @startuml
 start
 :User opens the app;
-if (User has an account?) then (yes)
+repeat
   :Enter login credentials;
   if (Credentials valid?) then (yes)
     :Load dashboard;
@@ -12,8 +12,7 @@ if (User has an account?) then (yes)
         :Display matching results;
       else (no)
         if (User wants to add a color?) then (yes)
-          :Enter color name and value;
-          :Validate input;
+          :Enter color name;
           :Insert record into Colors;
           :Show confirmation message;
         else (no)
@@ -22,13 +21,10 @@ if (User has an account?) then (yes)
       endif
     repeat while (Continue using the app?) is (yes)
     :End session;
+    stop
   else (no)
     :Show login error;
-    :End session;
   endif
-else (no)
-  :Show login error;
-  :End session;
-endif
+repeat while (Try again?) is (yes)
 stop
 @enduml
