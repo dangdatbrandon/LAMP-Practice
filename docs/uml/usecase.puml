@@ -10,14 +10,11 @@ rectangle "Colors Web App" {
   usecase "Log In" as UC2
   usecase "Search Colors" as UC3
   usecase "Add Color" as UC4
-  usecase "View Saved Colors" as UC5
 }
 
 User --> UC2
 User --> UC3
 User --> UC4
-User --> UC5
 UC3 --> DB
 UC4 --> DB
-UC5 --> DB
 @enduml
