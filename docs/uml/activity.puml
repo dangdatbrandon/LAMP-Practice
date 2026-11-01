@@ -24,10 +24,11 @@ if (User has an account?) then (yes)
     :End session;
   else (no)
     :Show login error;
+    :End session;
   endif
 else (no)
-  :Register a new account;
-  :Store user credentials;
+  :Show login error;
+  :End session;
 endif
 stop
 @enduml
