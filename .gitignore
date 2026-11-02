@@ -9,3 +9,18 @@ LAMPAPI/config.php
 .DS_Store
 .vscode/
 .idea/
+# Dependencies
+node_modules/
+
+# Lint reports / cache
+.eslintcache
+.stylelintcache
+*.lint.log
+
+# Build / generated
+dist/
+build/
+
+# Misc
+coverage/
+
