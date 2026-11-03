@@ -10,7 +10,7 @@ body
     margin: 2% 5%;
     text-align: center;
     font-family: Ubuntu, sans-serif;
-    color: #FFFFFF;
+    color: #FFF;
 }
 
 #loginDiv
@@ -51,7 +51,7 @@ body
 
 .buttons:hover{
     background-color: #00d5124f;
-    color: #FFFFFF;
+    color: #FFF;
     opacity: 0.5;
 }
 
@@ -59,14 +59,17 @@ body
 {
 	font-size: 30px;
 }
+
 #loginPassword
 {
 	font-size: 30px;
 }
+
 #searchText
 {
 	font-size: 30px;
 }
+
 #colorText
 {
 	font-size: 30px;
