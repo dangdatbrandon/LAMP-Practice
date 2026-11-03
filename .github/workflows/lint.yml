@@ -24,7 +24,7 @@ jobs:
       - name: Lint HTML
         run: npx htmlhint "**/*.html"
 
-      - name: Ling CSS
+      - name: Lint CSS
         run: npx stylelint "**/*.css"
 
       - name: Lint JavaScript
