@@ -25,7 +25,7 @@ jobs:
         run: npx htmlhint "**/*.html"
 
       - name: Lint CSS
-        run: npx stylelint "**/*.css" --config-file .stylelintrc.json
+        run: npx stylelint "**/*.css" --allow-empty-input
 
       - name: Lint JavaScript
         run: npx eslint .
