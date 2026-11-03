@@ -25,7 +25,7 @@ jobs:
         run: npx htmlhint "**/*.html"
 
       - name: Lint CSS
-        run: npx stylelint "**/*.css" || true
+        run: npx stylelint "**/*.css" --config .stylelintrc.json
 
       - name: Lint JavaScript
         run: npx eslint .
