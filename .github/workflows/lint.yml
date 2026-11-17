@@ -1,4 +1,4 @@
-name: Lint
+name: CI
 
 on:
   push:
@@ -8,7 +8,7 @@ permissions:
   contents: read
 
 jobs:
-  lint:
+  ci:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,3 +26,6 @@ jobs:
 
       - name: Run linters
         run: npm run lint
+
+      - name: Run tests
+        run: npm test
